@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.clock {
+  margin: 20px auto;
+  max-width: 50%;
+
+  padding-block: 70px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  color: white;
+  text-align: center;
+
+  background: #4d4d63;
+  background: radial-gradient(
+    circle,
+    rgba(77, 77, 99, 1) 0%,
+    rgba(61, 61, 71, 1) 35%,
+    rgba(28, 26, 26, 1) 100%
+  );
+}
+
+.time__box {
+  font-size: 52px;
+}
+
+.date__box {
+  font-size: 14px;
+}
+
+/* Task #2 */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+img {
+  width: 100%;
+}
+.wrapper {
+  position: relative;
+}
+.slider-wrapper {
+  position: relative;
+  height: 400px;
+}
+.slide-item {
+  /* display: none; */
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+.slide-item.active {
+  /* display: block; */
+  opacity: 1;
+  z-index: 10;
+  left: 0;
+}
+.slide-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.next,
+.prev {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.next {
+  right: 20px;
+}
+.prev {
+  left: 20px;
+}
+.pgn-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.pgn-btns button {
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pgn-btns button.active {
+  background-color: black;
+}
+
+/* Task #3 */
+
+.countdown__lecture--container {
+  padding-block: 50px;
+}
+
+.countdown__lecture--box {
+  color: white;
+  text-align: center;
+
+  background: #4d4d63;
+  background: radial-gradient(
+    circle,
+    rgba(77, 77, 99, 1) 0%,
+    rgba(61, 61, 71, 1) 35%,
+    rgba(28, 26, 26, 1) 100%
+  );
+
+  display: grid;
+  gap: 30px;
+  padding: 50px;
+  max-width: 50%;
+
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  margin: 0 auto;
+}
+
+.countdown__lecture--box span {
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.countdown {
+  margin-top: 5px;
+  font-size: 36px;
+}
